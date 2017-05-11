@@ -1,0 +1,14 @@
+#game {
+    background-image: url("New-Yak-2400px.png");
+    background-size: cover;
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
+
+.hair {
+    background-image: url("hair.png");
+    width: 60px;
+    height: 200px;
+    position: absolute;
+}
