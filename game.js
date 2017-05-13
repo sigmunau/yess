@@ -41,6 +41,7 @@ var levels = [
 ];
 
 function initializeLevel(level) {
+    console.log('Starting level ' + (level + 1));
     var game = $("#game");
     var intro = $(".intro");
     intro.detach();
@@ -77,7 +78,14 @@ function initializeLevel(level) {
 	    $("#messages").text(steps[step]);
 	    window.setTimeout(function() {el.show();}, time);
 	    if (hairLeft === 0) {
-	        initializeLevel(level + 1);
+            if (level + 1 == levels.length) {
+                console.log('victory');
+                var victory = $('.victory');
+                victory.detach();
+                game.append(victory.show());
+            } else {
+	            initializeLevel(level + 1);
+            }
 	    }
     });
 }
